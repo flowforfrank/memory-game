@@ -63,30 +63,6 @@ button {
     grid-gap: 20px;
 }
 
-.win {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: #FDF8E6;
-    transform: rotateY(180deg) rotateZ(50deg);
-}
-
-.win-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 21pt;
-    color: #282A3A;
-}
-
-.highlight {
-    color: #6f00fc;
-}
-
 .board-container.flipped .board {
     transform: rotateY(180deg) rotateZ(50deg);
 }
@@ -94,7 +70,6 @@ button {
 .board-container.flipped .win {
     transform: rotateY(0) rotateZ(0);
 }
-
 
 .card {
     position: relative;
@@ -129,4 +104,28 @@ button {
 
 .card.flipped .card-back {
     transform: rotateY(0) rotateZ(0);
+}
+
+.win {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #FDF8E6;
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.win-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21pt;
+    color: #282A3A;
+}
+
+.highlight {
+    color: #6f00fc;
 }
