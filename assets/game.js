@@ -50,18 +50,31 @@ const generateGame = () => {
         throw new Error("The dimension of the board must be an even number.")
     }
 
-    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
-    const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
+    const images = [
+        { src: 'https://bit.ly/3JEnbxb', alt: 'React' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'JS' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'HTML' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'CSS' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'Svelte' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'Jest' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'Cypress' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'Sass' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'AI' },
+        { src: 'https://bit.ly/3JEnbxb', alt: 'Phaser' }
+    ]
+    const picks = pickRandom(images, (dimensions * dimensions) / 2) 
     const items = shuffle([...picks, ...picks])
     const cards = `
         <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)">
             ${items.map(item => `
                 <div class="card">
-                    <div class="card-front"></div>
-                    <div class="card-back">${item}</div>
+                    <div class="card-front">${item.alt}</div>
+                    <div class="card-back">
+                        <img src="${item.src}" />
+                    </div>
                 </div>
             `).join('')}
-       </div>
+        </div>
     `
     
     const parser = new DOMParser().parseFromString(cards, 'text/html')
