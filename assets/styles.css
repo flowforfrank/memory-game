@@ -6,7 +6,7 @@
 html {
     width: 100%;
     height: 100%;
-    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    background: linear-gradient(325deg, #8a2be2 0%, #9b30ff 50%, #9370db 100%);
     font-family: Fredoka;
 }
 
@@ -24,7 +24,7 @@ html {
 }
 
 button {
-    background: #282A3A;
+    background: #5d3fd3;
     color: #FFF;
     border-radius: 5px;
     padding: 10px 20px;
@@ -35,7 +35,8 @@ button {
 }
 
 .disabled {
-    color: #757575;
+    background: #4a306d;
+    color: #a8a8a8;
 }
 
 .stats {
@@ -51,7 +52,7 @@ button {
 .win {
     border-radius: 5px;
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
-    background: linear-gradient(135deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    background: linear-gradient(135deg, #8a2be2 0%, #9b30ff 50%, #9370db 100%);
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
 }
@@ -84,18 +85,17 @@ button {
     border-radius: 5px;
     width: 100%;
     height: 100%;
-    background: #282A3A;
+    background: #6c4fbd;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
 }
 
 .card-back {
     transform: rotateY(180deg) rotateZ(50deg);
-    font-size: 28pt;
-    user-select: none;
-    text-align: center;
-    line-height: 100px;
-    background: #FDF8E6;
+    background: #8a2be2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card.flipped .card-front {
@@ -113,7 +113,7 @@ button {
     width: 100%;
     height: 100%;
     text-align: center;
-    background: #FDF8E6;
+    background: #f8f8ff;
     transform: rotateY(180deg) rotateZ(50deg);
 }
 
@@ -123,9 +123,9 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 21pt;
-    color: #282A3A;
+    color: #5d3fd3;
 }
 
 .highlight {
-    color: #6f00fc;
+    color: #9b30ff;
 }
